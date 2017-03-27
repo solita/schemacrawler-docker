@@ -7,10 +7,10 @@
 
 # Schemacrawler starter shell script overrides Java CLASSPATH so simply adding the JAR to classpath would not work.
 
-# Usage: docker run -v $(pwd):/share --rm -i -t lokori/schemacrawler
+# Usage: docker run -v "$(pwd)":/share --rm -i -t lokori/schemacrawler
 
 # Another example:
-# docker run -v $(pwd):/share --rm -i -t --entrypoint="/schemacrawler/schemacrawler.sh" lokori/schemacrawler  -url=jdbc:redshift://192.0.1.1:9878/awesomedb -user=acc -infolevel=standard -command=schema --schemas=awesomedb.staging loglevel=CONFIG -password=XX -outputformat=png -outputfile=/share/schemadiagram.png
+# docker run -v "$(pwd)":/share --rm -i -t --entrypoint="/schemacrawler/schemacrawler.sh" lokori/schemacrawler  -url=jdbc:redshift://192.0.1.1:9878/awesomedb -user=acc -infolevel=standard -command=schema --schemas=awesomedb.staging loglevel=CONFIG -password=XX -outputformat=png -outputfile=/share/schemadiagram.png
 
 
 # The SchemaCrawler license:

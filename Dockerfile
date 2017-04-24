@@ -45,6 +45,8 @@ FROM sualeh/schemacrawler
 
 COPY RedshiftJDBC42-1.2.1.1001.jar lib/
 
+COPY schemacrawler.config.properties config/
+
 ENTRYPOINT /bin/bash
 
 MAINTAINER Antti Virtanen <antti.virtanen@solita.fi>
